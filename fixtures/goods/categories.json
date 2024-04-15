@@ -1,0 +1,52 @@
+[
+  {
+    "model": "goods.categories",
+    "pk": 4,
+    "fields": { "name": "Все товары", "slug": "all" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 5,
+    "fields": { "name": "Маршмэллоу Суфле", "slug": "marshmellou-sufle" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 6,
+    "fields": { "name": "Веган", "slug": "vegan" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 7,
+    "fields": { "name": "Ягоды и фрукты", "slug": "yagody-i-frukty" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 8,
+    "fields": { "name": "Гигантский", "slug": "gigantskij" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 9,
+    "fields": { "name": "Фигуры", "slug": "figury" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 10,
+    "fields": { "name": "Животные/Рыбы", "slug": "zhivotnyeryby" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 11,
+    "fields": { "name": "Орехи Драже Шоколад", "slug": "orehi-drazhe-shokolad" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 12,
+    "fields": { "name": "Палочки пластинки", "slug": "palochki-plastinki" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 13,
+    "fields": { "name": "Другое", "slug": "drugoe" }
+  }
+]

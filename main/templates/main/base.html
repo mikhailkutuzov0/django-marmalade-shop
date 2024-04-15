@@ -59,7 +59,7 @@
                                 <li><a class="dropdown-item  text-black" href="carts/cart.html">Корзина</a></li>
                                 <li><a class="dropdown-item  text-black" href="users/profile.html">Личный кабинет</a>
                                 </li>
-                                <li><a class="dropdown-item  text-black" href="#">Админ панель</a></li>
+                                <li><a class="dropdown-item  text-black" href="{% url "admin:index" %}">Админ панель</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -88,13 +88,9 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-light" data-bs-theme="light">
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">Все товары</a></li>
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">кат1</a></li>
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">кат2</a></li>
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">кат3</a></li>
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">кат4</a></li>
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">кат5</a></li>
-                        <li><a class="dropdown-item text-black" href="goods/catalog.html">кат6</a></li>
+                        {% for category in categories %}
+                        <li><a class="dropdown-item text-black" href="{% url "catalog:index" %}">{{ category.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <!-- Значек корзины, вызывает модальное окно -->

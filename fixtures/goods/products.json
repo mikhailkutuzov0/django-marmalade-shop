@@ -1,0 +1,156 @@
+[
+  {
+    "model": "goods.products",
+    "pk": 1,
+    "fields": {
+      "name": "Йогуртовые Змеи",
+      "slug": "jogurtovye-zmei",
+      "description": "Фруктово-ягодный йогуртовый сладкий мягкий жевательный Мармелад с начинокой, Вкусы - Малина, Ежевика, Клубника, Черника, Яблоко, Лимон, Персик. Доставка по всей России.",
+      "image": "",
+      "price": "169.00",
+      "discount": "0.00",
+      "quantity": 111,
+      "category": 10
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 2,
+    "fields": {
+      "name": "Сердечки Ванильно-Клубничные",
+      "slug": "serdechki-vanilno-klubnichnye",
+      "description": "Мармеладные жевательные Конфетки с Джемовой Начинкой - Сердечки, Йогуртовая основа, сливочный ягодный Мармелад со вкусом Клубники и Ванили. Замечательное дополнение к сладкому столу или в качестве подарка любимым. Без Глютена.",
+      "image": "",
+      "price": "222.00",
+      "discount": "0.00",
+      "quantity": 321,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 3,
+    "fields": {
+      "name": "Мармелад Акулы",
+      "slug": "marmelad-akuly",
+      "description": "Без Глютена, Фруктовое лакомство. Мягкий, с Йогуртовой основой Мармелад в виде  Акул. Вкус Сливочной Ванили. Бесплатная доставка. Скидки.",
+      "image": "",
+      "price": "222.00",
+      "discount": "0.00",
+      "quantity": 213,
+      "category": 10
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 4,
+    "fields": {
+      "name": "Большие Лакричные Монеты,",
+      "slug": "bolshie-lakrichnye-monety",
+      "description": "",
+      "image": "",
+      "price": "111.00",
+      "discount": "0.00",
+      "quantity": 1221,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 5,
+    "fields": {
+      "name": "Мороженое розово-желтое, суфле, 100 гр",
+      "slug": "morozhenoe-rozovo-zheltoe-sufle-100-gr",
+      "description": "Суфле в виде рожка Мороженного со сливочным Ванильно-Клубничным вкусом.",
+      "image": "",
+      "price": "1222.00",
+      "discount": "0.00",
+      "quantity": 22,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 6,
+    "fields": {
+      "name": "Большой Тюльпан из Карамели, 1 шт, 80gr",
+      "slug": "bolshoj-tyulpan-iz-karameli-1-sht-80gr",
+      "description": "Подарок! (Чупа-Чупс) Умеренно Сладкий Карамельный Тюльпан в Подарок к Празднику.  Сиреневый-Черника, Белый - Ваниль, Красный - Клубника, Желтый - Персик, Розовый - Земляника. Доставка в Прозрачной упаковке. Леденец никогда не завянет и будут радовать долгое время, пока Вы не захотите его съесть :) *Принимаем Заказы на индивидуальные Сладкие Подарки любых фигур и композиций по вашему вкусу.",
+      "image": "",
+      "price": "112.00",
+      "discount": "0.00",
+      "quantity": 22,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 7,
+    "fields": {
+      "name": "Мармелад \"Яичница\", 100 гр",
+      "slug": "marmelad-yaichnica-100-gr",
+      "description": "",
+      "image": "",
+      "price": "245.00",
+      "discount": "0.00",
+      "quantity": 212,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 8,
+    "fields": {
+      "name": "Ягоды Крем-карамель, мармелад 100гр",
+      "slug": "yagody-krem-karamel-marmelad-100gr",
+      "description": "New! Мармелад в виде кексов с нежно сливочным вкусом. Десерт или как украшение для кондитерских изделий. Доставка.",
+      "image": "",
+      "price": "2121.00",
+      "discount": "0.00",
+      "quantity": 22,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 9,
+    "fields": {
+      "name": "Картошка Фри, 100гр",
+      "slug": "kartoshka-fri-100gr",
+      "description": "",
+      "image": "",
+      "price": "2121.00",
+      "discount": "0.00",
+      "quantity": 12,
+      "category": 9
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 10,
+    "fields": {
+      "name": "Суфле \"Яблоко с начинкой\" 100 грамм",
+      "slug": "sufle-yabloko-s-nachinkoj-100-gramm",
+      "description": "Очень вкусное маршмеллоу с невероятной желейной начинкой! Насыщенный вкус Зеленого кисло-сладкого Яблока! Попробуйте и Вы навсегда останетесь его поклонником! Бесплатная доставка по России!",
+      "image": "",
+      "price": "333.00",
+      "discount": "0.00",
+      "quantity": 323,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 11,
+    "fields": {
+      "name": "Палочки короткие Лакрица Ассорти, 100 гр",
+      "slug": "palochki-korotkie-lakrica-assorti-100-gr",
+      "description": "",
+      "image": "",
+      "price": "88.00",
+      "discount": "0.00",
+      "quantity": 22,
+      "category": 12
+    }
+  }
+]
