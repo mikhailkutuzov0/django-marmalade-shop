@@ -6,7 +6,7 @@
       "name": "Йогуртовые Змеи",
       "slug": "jogurtovye-zmei",
       "description": "Фруктово-ягодный йогуртовый сладкий мягкий жевательный Мармелад с начинокой, Вкусы - Малина, Ежевика, Клубника, Черника, Яблоко, Лимон, Персик. Доставка по всей России.",
-      "image": "",
+      "image": "goods_images/1_CRSKQ8x.jpg",
       "price": "169.00",
       "discount": "0.00",
       "quantity": 111,
@@ -20,7 +20,7 @@
       "name": "Сердечки Ванильно-Клубничные",
       "slug": "serdechki-vanilno-klubnichnye",
       "description": "Мармеладные жевательные Конфетки с Джемовой Начинкой - Сердечки, Йогуртовая основа, сливочный ягодный Мармелад со вкусом Клубники и Ванили. Замечательное дополнение к сладкому столу или в качестве подарка любимым. Без Глютена.",
-      "image": "",
+      "image": "goods_images/2_XTSygOw.jpg",
       "price": "222.00",
       "discount": "0.00",
       "quantity": 321,
@@ -34,9 +34,9 @@
       "name": "Мармелад Акулы",
       "slug": "marmelad-akuly",
       "description": "Без Глютена, Фруктовое лакомство. Мягкий, с Йогуртовой основой Мармелад в виде  Акул. Вкус Сливочной Ванили. Бесплатная доставка. Скидки.",
-      "image": "",
+      "image": "goods_images/2_OszAfqn.jpg",
       "price": "222.00",
-      "discount": "0.00",
+      "discount": "25.00",
       "quantity": 213,
       "category": 10
     }
@@ -48,9 +48,9 @@
       "name": "Большие Лакричные Монеты,",
       "slug": "bolshie-lakrichnye-monety",
       "description": "",
-      "image": "",
+      "image": "goods_images/2_nkG0ft8.jpg",
       "price": "111.00",
-      "discount": "0.00",
+      "discount": "20.00",
       "quantity": 1221,
       "category": 8
     }
@@ -62,11 +62,11 @@
       "name": "Мороженое розово-желтое, суфле, 100 гр",
       "slug": "morozhenoe-rozovo-zheltoe-sufle-100-gr",
       "description": "Суфле в виде рожка Мороженного со сливочным Ванильно-Клубничным вкусом.",
-      "image": "",
+      "image": "goods_images/2_OnBAaoB.jpg",
       "price": "1222.00",
       "discount": "0.00",
       "quantity": 22,
-      "category": 12
+      "category": 5
     }
   },
   {
@@ -76,7 +76,7 @@
       "name": "Большой Тюльпан из Карамели, 1 шт, 80gr",
       "slug": "bolshoj-tyulpan-iz-karameli-1-sht-80gr",
       "description": "Подарок! (Чупа-Чупс) Умеренно Сладкий Карамельный Тюльпан в Подарок к Празднику.  Сиреневый-Черника, Белый - Ваниль, Красный - Клубника, Желтый - Персик, Розовый - Земляника. Доставка в Прозрачной упаковке. Леденец никогда не завянет и будут радовать долгое время, пока Вы не захотите его съесть :) *Принимаем Заказы на индивидуальные Сладкие Подарки любых фигур и композиций по вашему вкусу.",
-      "image": "",
+      "image": "goods_images/2_Z9tbyeE.jpg",
       "price": "112.00",
       "discount": "0.00",
       "quantity": 22,
@@ -104,7 +104,7 @@
       "name": "Ягоды Крем-карамель, мармелад 100гр",
       "slug": "yagody-krem-karamel-marmelad-100gr",
       "description": "New! Мармелад в виде кексов с нежно сливочным вкусом. Десерт или как украшение для кондитерских изделий. Доставка.",
-      "image": "",
+      "image": "goods_images/2_OHjLKtI.jpg",
       "price": "2121.00",
       "discount": "0.00",
       "quantity": 22,
@@ -118,7 +118,7 @@
       "name": "Картошка Фри, 100гр",
       "slug": "kartoshka-fri-100gr",
       "description": "",
-      "image": "",
+      "image": "goods_images/2_PvCoJNy.jpg",
       "price": "2121.00",
       "discount": "0.00",
       "quantity": 12,
@@ -132,9 +132,9 @@
       "name": "Суфле \"Яблоко с начинкой\" 100 грамм",
       "slug": "sufle-yabloko-s-nachinkoj-100-gramm",
       "description": "Очень вкусное маршмеллоу с невероятной желейной начинкой! Насыщенный вкус Зеленого кисло-сладкого Яблока! Попробуйте и Вы навсегда останетесь его поклонником! Бесплатная доставка по России!",
-      "image": "",
+      "image": "goods_images/1_3rMTzWz.jpg",
       "price": "333.00",
-      "discount": "0.00",
+      "discount": "10.00",
       "quantity": 323,
       "category": 5
     }
@@ -146,11 +146,25 @@
       "name": "Палочки короткие Лакрица Ассорти, 100 гр",
       "slug": "palochki-korotkie-lakrica-assorti-100-gr",
       "description": "",
-      "image": "",
+      "image": "goods_images/2.jpg",
       "price": "88.00",
       "discount": "0.00",
       "quantity": 22,
       "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 12,
+    "fields": {
+      "name": "ащащаща",
+      "slug": "ashashasha",
+      "description": "",
+      "image": "goods_images/1.jpg",
+      "price": "2222.03",
+      "discount": "0.00",
+      "quantity": 20,
+      "category": 13
     }
   }
 ]
