@@ -1,5 +1,6 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import (
+    AuthenticationForm, UserCreationForm, UserChangeForm)
 
 from users.models import User
 
@@ -50,3 +51,31 @@ class UserRegistrationForm(UserCreationForm):
             'password1',
             'password2',
         )
+
+
+class ProfileForm(UserChangeForm):
+    """
+    Форма для редактирования профиля пользователя, основанная на модели User.
+
+    Args:
+        image (ImageField): Поле для загрузки изображения профиля пользователя.
+        first_name (CharField): Поле для ввода имени пользователя.
+        last_name (CharField): Поле для ввода фамилии пользователя.
+        username (CharField): Поле для ввода уникального имени пользователя.
+        email (CharField): Поле для ввода электронной почты пользователя.
+    """
+    class Meta:
+        model = User
+        fields = (
+            'image',
+            'first_name',
+            'last_name',
+            'username',
+            'email',
+        )
+
+    image = forms.ImageField(required=False)
+    first_name = forms.CharField()
+    last_name = forms.CharField()
+    username = forms.CharField()
+    email = forms.CharField()
