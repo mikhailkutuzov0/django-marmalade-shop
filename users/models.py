@@ -3,6 +3,12 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
+    """
+    Кастомная модель пользователя с дополнительным полем для аватара.
+
+    Args:
+        image (ImageField): Поле для хранения аватара пользователя.
+    """
     image = models.ImageField(upload_to='users_images',
                               blank=True, null=True, verbose_name='Аватар')
 
