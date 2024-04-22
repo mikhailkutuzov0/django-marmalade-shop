@@ -41,7 +41,7 @@ def registration(request):
             auth.login(request, user)
             messages.success(
                 request,
-                f'{user.username}, вы успешно зарегестрировались и вошли в аккаунт'
+                f'{user.username}, вы зарегестрировались и вошли в аккаунт'
             )
             return HttpResponseRedirect(reverse('main:index'))
     else:
