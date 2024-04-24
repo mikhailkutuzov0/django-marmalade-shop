@@ -37,8 +37,15 @@ class Cart(models.Model):
         return round(self.product.discounted_price() * self.quantity, 2)
 
     def __str__(self):
+        if self.user:
+            return (
+                f'Корзина {self.user.username} --- '
+                f'Товар {self.product.name} --- '
+                f'Количество {self.quantity}'
+            )
+
         return (
-            f'Корзина {self.user.username} --- '
+            f'Анонимная Корзина --- '
             f'Товар {self.product.name} --- '
             f'Количество {self.quantity}'
         )
