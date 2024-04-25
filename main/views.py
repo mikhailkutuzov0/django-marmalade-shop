@@ -4,7 +4,7 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title': 'Home - Главная',
-        'content': 'marmelade-shop',
+        'content': 'marmalade-shop-Главная',
     }
     return render(request, 'main/index.html', context)
 
@@ -16,3 +16,11 @@ def about(request):
         'text_on_page': 'Текст о том что это за магазин '
     }
     return render(request, 'main/about.html', context)
+
+
+def contacts(request):
+    return render(request, 'main/contacts.html')
+
+
+def delivery(request):
+    return render(request, 'main/delivery.html')
