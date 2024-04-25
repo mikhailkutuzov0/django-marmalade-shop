@@ -11,7 +11,7 @@ def index(request):
 
 def about(request):
     context = {
-        'title': 'Home - О нас',
+        'title': 'Marmalade-shop - О нас',
         'content': 'О нас',
         'text_on_page': 'Текст о том что это за магазин '
     }

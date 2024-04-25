@@ -59,7 +59,6 @@
                                 Мой профиль
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-black" href="carts/cart.html">Корзина</a></li>
                                 <li><a class="dropdown-item  text-black" href="{% url "users:profile" %}">Личный кабинет</a>
                                 </li>
                                 {% if user.is_admin or user.is_staff %}
