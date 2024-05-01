@@ -3,17 +3,34 @@ from django.contrib import messages
 from django.db import transaction
 from django.forms import ValidationError
 from django.shortcuts import redirect, render
+from django.views import View
+from django.utils.decorators import method_decorator
 
 from carts.models import Cart
-
 from orders.forms import CreateOrderForm
 from orders.models import Order, OrderItem
 
 
-@login_required
-def create_order(request):
-    if request.method == 'POST':
-        form = CreateOrderForm(data=request.POST)
+@method_decorator(login_required, name='dispatch')
+class CreateOrderView(View):
+    template_name = 'orders/create_order.html'
+    form_class = CreateOrderForm
+
+    def get(self, request, *args, **kwargs):
+        initial = {
+            'first_name': request.user.first_name,
+            'last_name': request.user.last_name,
+        }
+        form = self.form_class(initial=initial)
+        context = {
+            'title': 'Marmalade-shop - Оформление заказа',
+            'form': form,
+            'orders': True,
+        }
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(data=request.POST)
         if form.is_valid():
             try:
                 with transaction.atomic():
@@ -21,53 +38,41 @@ def create_order(request):
                     cart_items = Cart.objects.filter(user=user)
 
                     if cart_items.exists():
-                        order = Order.objects.create(
-                            user=user,
-                            phone_number=form.cleaned_data['phone_number'],
-                            requires_delivery=form.cleaned_data['requires_delivery'],
-                            delivery_address=form.cleaned_data['delivery_address'],
-                            payment_on_get=form.cleaned_data['payment_on_get'],
-                        )
-                        for cart_item in cart_items:
-                            product = cart_item.product
-                            name = cart_item.product.name
-                            price = cart_item.product.discounted_price()
-                            quantity = cart_item.quantity
-
-                            if product.quantity < quantity:
-                                raise ValidationError(
-                                    f'На складе недостаточно {name}\
-                                      В наличии - {product.quantity}'
-                                )
-
-                            OrderItem.objects.create(
-                                order=order,
-                                product=product,
-                                name=name,
-                                price=price,
-                                quantity=quantity,
-                            )
-                            product.quantity -= quantity
-                            product.save()
-
+                        order = self.create_order(user, form, cart_items)
                         cart_items.delete()
-
                         messages.success(request, 'Заказ оформлен.')
                         return redirect('users:profile')
             except ValidationError as e:
-                messages.success(request, str(e))
+                messages.error(request, str(e))
                 return redirect('cart:order')
-    else:
-        initial = {
-            'first_name': request.user.first_name,
-            'last_name': request.user.last_name,
-        }
+        return render(request, self.template_name, {'form': form})
 
-        form = CreateOrderForm(initial=initial)
+    def create_order(self, user, form, cart_items):
+        order = Order.objects.create(
+            user=user,
+            phone_number=form.cleaned_data['phone_number'],
+            requires_delivery=form.cleaned_data['requires_delivery'],
+            delivery_address=form.cleaned_data['delivery_address'],
+            payment_on_get=form.cleaned_data['payment_on_get'],
+        )
+        for cart_item in cart_items:
+            product = cart_item.product
+            name = product.name
+            price = product.discounted_price()
+            quantity = cart_item.quantity
 
-    context = {
-        'title': 'Marmalade-shop - Оформление заказа',
-        'form': form,
-        'orders': True,
-    }
-    return render(request, 'orders/create_order.html', context=context)
+            if product.quantity < quantity:
+                raise ValidationError(
+                    f'На складе недостаточно {name} В наличии - {product.quantity}'
+                )
+
+            OrderItem.objects.create(
+                order=order,
+                product=product,
+                name=name,
+                price=price,
+                quantity=quantity,
+            )
+            product.quantity -= quantity
+            product.save()
+        return order
