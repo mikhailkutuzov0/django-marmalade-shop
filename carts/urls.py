@@ -1,11 +1,13 @@
 from django.urls import path
-from carts import views
+from . import views
 
-
-app_name = 'carts'
+app_name = 'carts'  # Пространство имен для URL-адресов
 
 urlpatterns = [
-    path('cart_add/', views.cart_add, name='cart_add'),
-    path('cart_change/', views.cart_change, name='cart_change'),
-    path('cart_remove/', views.cart_remove, name='cart_remove'),
+    # Добавление товара в корзину
+    path('cart_add/', views.CartAddView.as_view(), name='cart_add'),
+    # Изменение количества товара в корзине
+    path('cart_change/', views.CartChangeView.as_view(), name='cart_change'),
+    # Удаление товара из корзины
+    path('cart_remove/', views.CartRemoveView.as_view(), name='cart_remove'),
 ]
